@@ -7,7 +7,7 @@ This is a Pond bot designed to survive and defeat all bosses efficiently. This b
 •	Controlled leaf-like movement: dodges projectiles and avoids walls while keeping the duck mobile.<br/>
 •	Dynamic scanning and firing: detects the closest enemy and fires accurately within range.<br/>
 •	Back-off logic: automatically retreats if too close to an enemy or a wall, minimizing health loss.<br/>
-•	Prioritization potential: can be extended to target low-health enemies first (e.g., bomber).
+•	Prioritization potential: can be extended to target low-health enemies first (e.g., sniper).
 
 # How it works
 1.	Movement: small leaf-like steps keep the duck moving safely across the arena.<br/>
