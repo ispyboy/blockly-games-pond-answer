@@ -3,7 +3,7 @@ This is a bot coded with JavaScript for the "Pond" segment of  Blockly Games (ht
 
 # Pond Multi-Boss Bot
 
-This is a Pond AI bot designed to survive and defeat multiple bosses efficiently.
+This is a Pond AI bot designed to survive and defeat all bosses efficiently.
 
 # Features
 	•	Safe starting position: begins moving downward to avoid immediate wall collisions.
@@ -20,8 +20,8 @@ This is a Pond AI bot designed to survive and defeat multiple bosses efficiently
 
 # Usage
 
-# Copy the bot code into your Pond game script. The bot will automatically:
-	•	Move in safe circular patterns
-	•	Scan for enemies
-	•	Fire when in range
-	•	Back off when needed
+Copy the bot code into your Pond game script. The bot will automatically:
+	Move in safe circular patterns
+	Scan for enemies
+	Fire when in range
+	Back off when needed
