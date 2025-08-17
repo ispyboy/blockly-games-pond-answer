@@ -20,7 +20,7 @@ This is a Pond AI bot designed to survive and defeat all bosses efficiently.
 
 # Usage
 
-Copy the bot code into your Pond game script. The bot will automatically:
+Copy the bot code into your Pond game script. The bot will automatically:<br/>
 	- Move in safe circular patterns<br/>
 	- Scan for enemies<br/>
 	- Fire when in range<br/>
