@@ -1,6 +1,3 @@
-# blockly-games-pond-answer
-This is a bot coded with JavaScript for the "Pond" segment of  Blockly Games (https://blockly.games). It moves in a leaf-like pattern and kills all three bosses with a high chance of surviving with more than 50% health! 
-
 # Pond Multi-Boss Bot
 
 This is a Pond AI bot designed to survive and defeat all bosses efficiently.
