@@ -1,0 +1,35 @@
+var angle = 270; // start downward
+
+while (true) {
+  // small circle movement for dodging
+  angle = (angle + 5) % 360;
+
+  // Prevent hitting walls: steer away if too close
+  if (getX() < 20) angle = 0;    // steer right
+  if (getX() > 80) angle = 180;  // steer left
+  if (getY() < 20) angle = 90;   // steer up
+  if (getY() > 80) angle = 270;  // steer down
+
+  swim(angle, 40); // safe movement
+
+  var target = null;
+  var targetDist = 1000;
+
+  // Scan for enemies
+  for (var a = 0; a < 360; a += 10) {
+    var d = scan(a, 5);
+    if (d <= 70 && d < targetDist) {
+      targetDist = d;
+      target = a;
+    }
+  }
+
+  if (target !== null) {
+    cannon(target, targetDist);
+
+    // Back off if enemy too close or near walls
+    if (targetDist <= 15 || getX() < 15 || getX() > 85 || getY() < 15 || getY() > 85) {
+      swim((target + 180) % 360, 40); 
+    }
+  }
+}
