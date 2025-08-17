@@ -10,7 +10,7 @@ This is a Pond AI bot designed to survive and defeat all bosses efficiently.
 •	Prioritization potential: can be extended to target low-health enemies first (e.g., bomber).
 
 # How it works
-1.	Movement: small circle steps keep the duck moving safely across the arena.<br/>
+1.	Movement: small leaf-like steps keep the duck moving safely across the arena.<br/>
 2.	Scanning: scans every 10° (or adjustable) to find enemies within cannon range.<br/>
 3.	Firing: uses narrow scans to ensure accurate hits on stationary or moving targets.<br/>
 4.	Collision avoidance: checks proximity to walls and enemies, adjusting movement to prevent damage.
@@ -18,7 +18,7 @@ This is a Pond AI bot designed to survive and defeat all bosses efficiently.
 # Usage
 
 Copy the bot code into your Pond game script. The bot will automatically:<br/>
-	- Move in safe circular patterns<br/>
+	- Move in safe leaf-like arcs<br/>
 	- Scan for enemies<br/>
 	- Fire when in range<br/>
 	- Back off when needed<br/>
