@@ -1,35 +1,30 @@
-var angle = 270; // start downward
+var moveAngle = 270; // start moving down
+var safeSpeed = 50;
+var maxRange = 70;
+var scanStep = 20;
+var changeTick = 0;
 
 while (true) {
-  // small circle movement for dodging
-  angle = (angle + 5) % 360;
-
-  // Prevent hitting walls: steer away if too close
-  if (getX() < 20) angle = 0;    // steer right
-  if (getX() > 80) angle = 180;  // steer left
-  if (getY() < 20) angle = 90;   // steer up
-  if (getY() > 80) angle = 270;  // steer down
-
-  swim(angle, 40); // safe movement
-
-  var target = null;
-  var targetDist = 1000;
-
-  // Scan for enemies
-  for (var a = 0; a < 360; a += 10) {
-    var d = scan(a, 5);
-    if (d <= 70 && d < targetDist) {
-      targetDist = d;
-      target = a;
+  // Scan for target
+  for (var angle = 0; angle < 360; angle += scanStep) {
+    var dist = scan(angle, 5);
+    if (dist != Infinity && dist <= maxRange) {
+      cannon(angle, dist);
     }
   }
 
-  if (target !== null) {
-    cannon(target, targetDist);
-
-    // Back off if enemy too close or near walls
-    if (targetDist <= 15 || getX() < 15 || getX() > 85 || getY() < 15 || getY() > 85) {
-      swim((target + 180) % 360, 40); 
-    }
+  // Change direction occasionally
+  changeTick++;
+  if (changeTick % 20 === 0) {
+    moveAngle += (Math.random() * 60 - 30); // small random turn
+    moveAngle = (moveAngle + 360) % 360;
   }
+
+  // Avoid walls
+  if (getX() < 15) moveAngle = 0;   // go right
+  if (getX() > 85) moveAngle = 180; // go left
+  if (getY() < 15) moveAngle = 90;  // go up
+  if (getY() > 85) moveAngle = 270; // go down
+
+  swim(moveAngle, safeSpeed);
 }
