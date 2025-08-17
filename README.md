@@ -1,10 +1,10 @@
 # Pond Multi-Boss Bot
 
-This is a Pond AI bot designed to survive and defeat all bosses efficiently.
+This is a Pond bot designed to survive and defeat all bosses efficiently. This bot is meant for use in Blockly Games's Pond segment (https://blockly-games/en/pond-duck.html?lang=en). The Pond segment is an open contest to see who can make the most intelligent duck. This definitely won't come close to the best submission, but I had lots of fun (and crashouts) while making this, and you should try it out too. It's really fun, and even if you have no foundational JavaScript knowledge, you can go to the homepage of blockly games (https://blockly.games) and start learning!
 
 # Features
 •	Safe starting position: begins moving downward to avoid immediate wall collisions.<br/>
-•	Controlled circular movement: dodges projectiles and avoids walls while keeping the duck mobile.<br/>
+•	Controlled leaf-like movement: dodges projectiles and avoids walls while keeping the duck mobile.<br/>
 •	Dynamic scanning and firing: detects the closest enemy and fires accurately within range.<br/>
 •	Back-off logic: automatically retreats if too close to an enemy or a wall, minimizing health loss.<br/>
 •	Prioritization potential: can be extended to target low-health enemies first (e.g., bomber).
