@@ -10,7 +10,7 @@ This is a Pond bot designed to survive and defeat all bosses efficiently. This b
 •	Prioritization potential: can be extended to target low-health enemies first (e.g., sniper).
 
 # How it works
-1.	Movement: small leaf-like steps keep the duck moving safely across the arena.<br/>
+1.	Movement: the linear movement patterns keep the duck moving safely across the arena.<br/>
 2.	Scanning: scans every 10° (or adjustable) to find enemies within cannon range.<br/>
 3.	Firing: uses narrow scans to ensure accurate hits on stationary or moving targets.<br/>
 4.	Collision avoidance: checks proximity to walls and enemies, adjusting movement to prevent damage.
